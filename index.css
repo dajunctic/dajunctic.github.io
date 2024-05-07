@@ -12,12 +12,12 @@
 
 @font-face {
     font-family: Aquire;
-    src: url(assets/fonts/Aquire-BW0ox.otf);
+    src: url(https://dajunctic.github.io/assets/fonts/Aquire-BW0ox.otf);
   }
 
 
 body {
-    background: url(assets/images/bg.jpg);
+    background: url(https://dajunctic.github.io/assets/images/bg.jpg);
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     background-size: cover;
