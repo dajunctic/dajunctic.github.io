@@ -8,7 +8,11 @@
         <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="https://dajunctic.github.io/index.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css" integrity="sha512-U9Y1sGB3sLIpZm3ePcrKbXVhXlnQNcuwGQJ2WjPjnp6XHqVTdgIlbaDzJXJIAuCTp3y22t+nhI4B88F/5ldjFA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
+    	
+		<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+		<!--<script  src="index.js"></script>-->
+		<!--<script  src="https://dajunctic.github.io/index.js"></script>-->
+	</head>
     <body>
     <header class="headerhome">
         <div class='logo'>
@@ -23,22 +27,36 @@
                 <li><a href="https://dajunctic.github.io/pages/about">Giới thiệu</a></li>
             </ul>
         </nav>
-        <!--
-								<button>
-            <a href="#">Get Started</a>
-        </button>
-								-->
     </header>
-  
-  
-    <div style="display: flex;align-items: center; align-content: center; height: 80%;">
-    <div style="border-radius: 50px;width: 700px;margin: auto; height: 200px;">
-        
-        <h1 style="margin: 20px;text-align: center;color: white"> Website sẽ update khi nào tôi rảnh.<br> Thân ái! </h1>
-        <h1 style="margin: 50px;text-align: center;color: white">Đạt</h1>
-        
-    </div>
-    </div>
+
+		
+	<section class="home" id="home">
+		<div class="home-content">
+			<h3>Xin chào, là tôi</h3>
+			<h1>Vũ Quý Đạt</h1>
+			<h3>Tôi là một siêu <span id="element"></span></h3>
+			<p>Một sinh viên IT gà mờ từng ước mơ trở thành người quyền lực nhất thế giới đã bị xé nát. Khi anh đang 
+				phải chật vật mưu sinh với kỹ năng lập trình cùi bắp của mình thì có thứ gì đó xuất hiện trước mặt anh,
+				“hệ thống game thủ hiền triết đã được kích hoạt”, từ đó bước chân theo con đường trở thành đệ nhất 
+				thiên hạ Youtuber.
+			</p>
+		</div>
+		
+		<div class="home-img">
+			<img src="assets/images/card.png" alt="">
+		</div>
+
+		<script>
+			const typed = new Typed('#element', {
+				strings: ['Lập trình viên', 'Youtuber', 'Blogger' ,'Họa sĩ châu Á'],
+				typeSpeed: 50,
+				backSpeed: 50,
+				backDelay: 500,
+				loop: true
+			});
+		</script>
+		
+	</section>
 
     <footer>
         <div class='footer-content'>
@@ -58,7 +76,7 @@
 
     </footer>
 
-    <script  src="./script/index.js"></script>
+
 
     </body>
 </html>
