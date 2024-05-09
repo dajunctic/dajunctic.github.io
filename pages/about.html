@@ -21,11 +21,34 @@
                 <li><a href="https://dajunctic.github.io">Trang chủ</a></li>
                 <li><a href="https://dajunctic.github.io/pages/video">Vi đê ô</a></li>
                 <li><a href="https://dajunctic.github.io/pages/blog">Bài viết</a></li>
-                <li><a href="https://dajunctic.github.io/pages/story">Truyện tự viết</a></li>
+                <li><a href="https://dajunctic.github.io/pages/art">Nghệ thuật</a></li>
                 <li><a href="https://dajunctic.github.io/pages/about">Giới thiệu</a></li>
             </ul>
         </nav>
-		<!--<div></div>-->
+		<div class='toggle_btn'>
+			<i class="fa-solid fa-bars"></i>
+		</div>
+		<nav class="dropdown_menu">
+            <ul>
+                <li><a href="https://dajunctic.github.io">Trang chủ</a></li>
+                <li><a href="https://dajunctic.github.io/pages/video">Vi đê ô</a></li>
+                <li><a href="https://dajunctic.github.io/pages/blog">Bài viết</a></li>
+                <li><a href="https://dajunctic.github.io/pages/art">Nghệ thuật</a></li>
+                <li><a href="https://dajunctic.github.io/pages/about">Giới thiệu</a></li>
+            </ul>
+        </nav>
+		
+		<script>
+			const toggleBtn = document.querySelector('.toggle_btn');
+			const toggleBtnIcon = document.querySelector('.toggle_btn i');
+			const dropdownMenu = document.querySelector('.dropdown_menu');
+
+			toggleBtn.onclick = function(){
+				dropdownMenu.classList.toggle('open');
+				const isOpen = dropdownMenu.classList.contains('open');
+				toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+			};
+		</script>
 
     </header>
   
@@ -57,7 +80,6 @@
 
     </footer>
 
-    <script  src="./script/index.js"></script>
 
     </body>
 </html>

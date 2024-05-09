@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css" integrity="sha512-U9Y1sGB3sLIpZm3ePcrKbXVhXlnQNcuwGQJ2WjPjnp6XHqVTdgIlbaDzJXJIAuCTp3y22t+nhI4B88F/5ldjFA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     	
 		<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-		<!--<script  src="index.js"></script>-->
+		<script src="index.js"></script>
 		<!--<script  src="https://dajunctic.github.io/index.js"></script>-->
 	</head>
     <body>
@@ -23,10 +23,36 @@
                 <li><a href="https://dajunctic.github.io">Trang chủ</a></li>
                 <li><a href="https://dajunctic.github.io/pages/video">Vi đê ô</a></li>
                 <li><a href="https://dajunctic.github.io/pages/blog">Bài viết</a></li>
-                <li><a href="https://dajunctic.github.io/pages/story">Truyện tự viết</a></li>
+                <li><a href="https://dajunctic.github.io/pages/art">Nghệ thuật</a></li>
                 <li><a href="https://dajunctic.github.io/pages/about">Giới thiệu</a></li>
             </ul>
         </nav>
+		
+		<div class='toggle_btn'>
+			<i class="fa-solid fa-bars"></i>
+		</div>
+		<nav class="dropdown_menu">
+            <ul>
+                <li><a href="https://dajunctic.github.io">Trang chủ</a></li>
+                <li><a href="https://dajunctic.github.io/pages/video">Vi đê ô</a></li>
+                <li><a href="https://dajunctic.github.io/pages/blog">Bài viết</a></li>
+                <li><a href="https://dajunctic.github.io/pages/art">Nghệ thuật</a></li>
+                <li><a href="https://dajunctic.github.io/pages/about">Giới thiệu</a></li>
+            </ul>
+        </nav>
+		
+		<script>
+			const toggleBtn = document.querySelector('.toggle_btn');
+			const toggleBtnIcon = document.querySelector('.toggle_btn i');
+			const dropdownMenu = document.querySelector('.dropdown_menu');
+
+			toggleBtn.onclick = function(){
+				dropdownMenu.classList.toggle('open');
+				const isOpen = dropdownMenu.classList.contains('open');
+				toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+			};
+		</script>
+		
     </header>
 
 		
