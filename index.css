@@ -19,7 +19,8 @@
 body {
     background: url(https://dajunctic.github.io/assets/images/bg.jpg);
     height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+	font-family: "Quicksand", sans-serif;
     background-size: cover;
     background-position: center;
     color: white;
@@ -75,6 +76,7 @@ body {
     color: #fff;
     text-decoration: None;
     cursor: pointer;
+	font-family: "Quicksand", serif;
 }
 
 .headerhome button{
@@ -104,7 +106,8 @@ footer{
     background-color: rgba(0, 0, 0, 0.3);
     height: auto;
     width: 100%;
-    font-family: "Open Sans";
+    /*font-family: "Open Sans";*/
+	font-family: "Quicksand", sans-serif;
     padding-top: 40px;
     color: #fff;
 }
@@ -128,6 +131,7 @@ footer{
     margin: 10px auto;
     line-height: 28px;
     font-size: 15px;
+	font-family: "Quicksand", sans-serif;
 }
 .socials{
     list-style: none;
@@ -162,6 +166,7 @@ section{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-family: "Quicksand", sans-serif;
 }
 
 .home-img img {
@@ -213,6 +218,7 @@ section{
 }
 
 .toggle_btn{
+	font-size: 1.5rem;
 	display: none;
 }
 
@@ -238,12 +244,12 @@ section{
 	}
 	
 	.home {
-		padding: 1rem 3% 2rem;
+		padding: 1rem 10% 2rem;
 		flex-direction: column;
 	}
 	
 	.home-img img {
-		width: 80vw;
+		width: 60vw;
 	}
 	
 	.footer-content p{

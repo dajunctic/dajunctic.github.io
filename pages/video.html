@@ -5,10 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Video</title>
 
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="../index.css">
+		<link rel="stylesheet" href="../css/video.css">
+		<link rel="stylesheet" href="https://dajunctic.github.io/css/video.css">
         <link rel="stylesheet" href="https://dajunctic.github.io/index.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css" integrity="sha512-U9Y1sGB3sLIpZm3ePcrKbXVhXlnQNcuwGQJ2WjPjnp6XHqVTdgIlbaDzJXJIAuCTp3y22t+nhI4B88F/5ldjFA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 
     </head>
     <body>
@@ -25,19 +29,100 @@
                 <li><a href="https://dajunctic.github.io/pages/about">Giới thiệu</a></li>
             </ul>
         </nav>
-		<!--<div></div>-->
+		<div class='toggle_btn'>
+			<i class="fa-solid fa-bars"></i>
+		</div>
+		<nav class="dropdown_menu">
+            <ul>
+                <li><a href="https://dajunctic.github.io">Trang chủ</a></li>
+                <li><a href="https://dajunctic.github.io/pages/video">Vi đê ô</a></li>
+                <li><a href="https://dajunctic.github.io/pages/blog">Bài viết</a></li>
+                <li><a href="https://dajunctic.github.io/pages/art">Nghệ thuật</a></li>
+                <li><a href="https://dajunctic.github.io/pages/about">Giới thiệu</a></li>
+            </ul>
+        </nav>
+		
+		<script>
+			const toggleBtn = document.querySelector('.toggle_btn');
+			const toggleBtnIcon = document.querySelector('.toggle_btn i');
+			const dropdownMenu = document.querySelector('.dropdown_menu');
+
+			toggleBtn.onclick = function(){
+				dropdownMenu.classList.toggle('open');
+				const isOpen = dropdownMenu.classList.contains('open');
+				toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+			};
+		</script>
 
     </header>
   
   
-    <div style="display: flex;align-items: center; align-content: center; height: 80%">
-    <div style="border-radius: 50px;width: 700px;margin: auto;height: 200px;">
-        
-        <h1 style="margin: 20px;text-align: center;color: white"> Website sẽ update khi nào tôi rảnh.<br> Thân ái! </h1>
-        <h1 style="margin: 50px;text-align: center;color: white">Đạt</h1>
-        
-    </div>
-    </div>
+    <section class="youtube-video-section">
+		<h3 class='video-list-heading'>Pygame Tutorial</h3>
+		<p class='video-list-description'>Đây là series vi đê ô chính của tôi.</p>
+		<div class="video-container">
+			<div class='main-video'>
+				<div class='youtube-video'>
+					<iframe src="https://www.youtube.com/embed/-fph0FEiExg?si=-QEFseekYggndOGe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					<h3 class='video-title'>01. Giới thiệu về Pygame, tạo cửa sổ game </h3>
+				</div>
+			</div>
+			
+			<div class='video-list'>
+				<div class='vid active'>
+					<img src="https://img.youtube.com/vi/-fph0FEiExg/maxresdefault.jpg" alt="https://www.youtube.com/embed/-fph0FEiExg?si=-QEFseekYggndOGe">
+					<h3 class='video-title'>1. Giới thiệu về Pygame, tạo cửa sổ game </h3>
+				</div>
+				<div class='vid'>
+					<img src="https://img.youtube.com/vi/xgxQHMmEloY/maxresdefault.jpg" alt="https://www.youtube.com/embed/xgxQHMmEloY?si=-QEFseekYggndOGe">
+					<h3 class='video-title'>2. Vẽ hình học cơ bản, sự kiện bàn phím </h3>
+				</div>
+				<div class='vid'>
+					<img src="https://img.youtube.com/vi/D1usCj5sZ1Y/maxresdefault.jpg" alt="https://www.youtube.com/embed/D1usCj5sZ1Y?si=-QEFseekYggndOGe">
+					<h3 class='video-title'>3. Luyện tập với game Ping Pong</h3>
+				</div>
+				<div class='vid'>
+					<img src="https://img.youtube.com/vi/IxBCbSlZV1U/maxresdefault.jpg" alt="https://www.youtube.com/embed/IxBCbSlZV1U?si=-QEFseekYggndOGe">
+					<h3 class='video-title'>4. Hiển thị hình ảnh, chữ trên cửa sổ game  </h3>
+				</div>
+				<div class='vid'>
+					<img src="https://img.youtube.com/vi/SMnv0BPQ1zw/maxresdefault.jpg" alt="https://www.youtube.com/embed/SMnv0BPQ1zw?si=-QEFseekYggndOGe">
+					<h3 class='video-title'>5. Nhạc nền và âm thanh hiệu ứng </h3>
+				</div>
+				<div class='vid'>
+					<img src="https://img.youtube.com/vi/V1S1Z9chTKM/maxresdefault.jpg" alt="https://www.youtube.com/embed/V1S1Z9chTKM?si=-QEFseekYggndOGe">
+					<h3 class='video-title'>6. Tạo Menu trong Pygame </h3>
+				</div>
+				<div class='vid'>
+					<img src="https://img.youtube.com/vi/DPjQJFAdAZk/maxresdefault.jpg" alt="https://www.youtube.com/embed/DPjQJFAdAZk?si=-QEFseekYggndOGe">
+					<h3 class='video-title'>7. Tạo hiệu ứng hoạt ảnh cho nhân vật </h3>
+				</div>
+
+			</div>
+		</div>
+		
+		<script>
+			let listVideo = document.querySelectorAll('.video-list .vid');
+			let mainVideo = document.querySelector('.main-video iframe');
+			let title = document.querySelector('.main-video .video-title');
+			
+			listVideo.forEach(video => {
+				video.onclick = () => {
+					listVideo.forEach(vid => vid.classList.remove('active'));
+					video.classList.add('active');
+					if (video.classList.contains("active")){
+						let src = video.children[0].getAttribute('alt');
+						mainVideo.src = src;
+						let text = video.children[1].innerHTML;
+						title.innerHTML = text;
+					}
+				}
+				
+			});
+		</script>
+		
+		
+	</section>
 
 	<footer>
         <div class='footer-content'>
