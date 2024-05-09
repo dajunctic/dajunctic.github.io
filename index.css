@@ -58,6 +58,14 @@ body {
     text-decoration: None;
 }
 
+.navhome .active{
+	color: #fd5e53;
+}
+
+.dropdown_menu .active{
+	color: #fd5e53;
+}
+
 .dropdown_menu li{
 	display: inline-block;
     list-style: none;
@@ -249,7 +257,7 @@ section{
 	}
 	
 	.home-img img {
-		width: 60vw;
+		width: 50vw;
 	}
 	
 	.footer-content p{
@@ -266,5 +274,7 @@ section{
 		left: 2rem;
 		width: unset;
 	}
-	
+	.home-img img {
+		width: 60vw;
+	}
 }
