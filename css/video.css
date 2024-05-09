@@ -25,7 +25,7 @@
 .main-video {
 	background: rgba(0, 0, 0, 0.2);
 	
-	border-radius: 5px;
+	border-radius: 10px;
 	padding: 10px;
 }
 
@@ -52,12 +52,12 @@
 .video-list .vid iframe {
 	width: 100px;
 	border-radius: 5px;
-	aspect-ratio: 16/9;
+	aspect-ratio: 11/9;
 }
 
 .video-list .vid img {
 	width: 100px;
-	border-radius: 5px;
+	border-radius: 10px;
 	aspect-ratio: 16/9;
 }
 
@@ -67,14 +67,15 @@
 }
 
 .video-list .vid::-webkit-scrollbar-track{
-	width: 7px;
+	width: 6px;
 }
 
 .video-list .vid {
 	display: flex;
 	align-items: center;
 	gap: 15px;
-	background: #f7f7f7;
+	/*background: #f7f7f7;*/
+	background: #000;
 	border-radius: 5px;
 	margin: 10px;
 	border: 1px solid rgba(0, 0, 0, 0.1);
@@ -82,11 +83,11 @@
 }
 
 .video-list .vid:hover {
-	background: #eee;
+	background: #717171;
 }
 
 .video-list .vid.active {
-	background: #2980b9;
+	background: rgba(204,185,163,1.000);
 }
 
 .video-list .vid.active .video-title {
@@ -94,14 +95,14 @@
 }
 
 .video-list .vid .video-title {
-	color: #333;
+	color: #fff;
 	font-size: 15px;
 }
 
 @media (max-width:991px){
 	.video-container {
 		grid-template-columns: 1.5fr 1fr;
-		padding: 10px;
+		padding: 18px;
 	}
 }
 
