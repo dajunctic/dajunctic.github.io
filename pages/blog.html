@@ -7,13 +7,14 @@
 
         <link rel="stylesheet" href="../index.css">
 		<link rel="stylesheet" href="../css/blog.css">
-		<link rel="stylesheet" href="https://dajunctic.github.io/css/blog.css">
+		<!--<link rel="stylesheet" href="https://dajunctic.github.io/css/blog.css">-->
         <link rel="stylesheet" href="https://dajunctic.github.io/index.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css" integrity="sha512-U9Y1sGB3sLIpZm3ePcrKbXVhXlnQNcuwGQJ2WjPjnp6XHqVTdgIlbaDzJXJIAuCTp3y22t+nhI4B88F/5ldjFA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
 
     </head>
     <body>
@@ -62,8 +63,11 @@
 		<!--<iframe width="100%" height="800px" src="https://hackmd.io/@dajunctic/HkS11r7MC" frameborder="0"></iframe>-->
 		
 		<div class='blog-container'>
-			<div>
+			<div class="blog-title">
 				<h2> Chữa bài Daily Leetcode</h2>
+				<p> Hằng ngày tôi đều làm Leetcode Daily, thứ 7 hàng tuần tôi luôn dành thời gian viết chữa bài 
+					với hi vọng có thể truyền cảm hứng cho mọi người rèn luyện sự kỷ luật.</p>
+				<p> Tham gia ngay <i class="fa-brands fa-discord"></i> <a href="https://discord.gg/BrSzUsWp2w">  Lowie's Leetcode Community </a> để rèn luyện tư duy thuật toán nào!</p>
 			</div>
 			
 			<div class='card-content' style="display: none;">
@@ -71,8 +75,8 @@
 					<div class='card-image'>
 						<img src="https://dajunctic.github.io/assets/images/HackMD.jpg" alt="">
 						<div class="card-info">
-							<h3>Card 01</h3>
-							<p> Lorem ipsum dolor sit amet. Et laboriosam voluptatum sed nemo omnis non quis dolorem et.</p>
+							<h3> 881. Boats To Save People</h3>
+							<p> <i class="fa-regular fa-clock"></i> 04/05/2024</p>
 						</div>
 					</div>
 				</div>
@@ -410,7 +414,37 @@
 				return range(1, sideWidth).concat(0, range(page - leftWidth, page + rightWidth), 0, range(totalPages - sideWidth + 1, totalPages));
 			}
 			
+			
+			$.get( "../assets/data/blog.csv", function(CSVdata) {
+				data = $.csv.toObjects(CSVdata);
+				console.log(data);
+				console.log(data.length);
+				
+				//for (let i = 0; i < data.length; i ++) {
+				//	var title = data[i].title;
+				//	var date = data[i].date;
+				//	var url = data[i].url;
+				//	
+				//	$(".card-content .card").append(
+				//		$("<div>").addClass("card").append(
+				//			$("<div>").addClass("card-image").append(
+				//				$("<img>").attr({"src": "https://dajunctic.github.io/assets/images/HackMD.jpg"}),
+				//				$("<div>").addClass("card-info").append(
+				//					$("<h3>").text(title),
+				//					$("<p>").text(url),
+				//				)
+				//			)
+				//		)
+				//	);
+				//}
+		
+			});
+			
 			$(function(){
+				// Display Card Content
+				
+				
+				// Display Pagination
 				var numberOfItems = $(".card-content .card").length;
 				var limitPerPage = 3; // Card per Page
 				var totalPages = Math.ceil(numberOfItems / limitPerPage);
