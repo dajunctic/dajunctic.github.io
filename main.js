@@ -65,7 +65,14 @@ document.addEventListener("DOMContentLoaded", function() {
         if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
 
         // Apply saved theme on initial load
-        applyTheme(localStorage.getItem('theme') || 'dark');
+        const savedTheme = localStorage.getItem('theme');
+
+        if (savedTheme) {
+            applyTheme(savedTheme);
+        } else {
+            // Default to light theme on first visit for any page
+            applyTheme('light');
+        }
 
         // Initialize click listeners for language buttons
         document.querySelectorAll('.lang-btn').forEach(btn => {
