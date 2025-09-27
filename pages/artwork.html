@@ -8,85 +8,36 @@
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3859487427812629"
      crossorigin="anonymous"></script>
 
-		<link rel="stylesheet" href="../index.css">
-        <link rel="stylesheet" href="https://dajunctic.github.io/index.css">
+		<link rel="stylesheet" href="/index.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css" integrity="sha512-U9Y1sGB3sLIpZm3ePcrKbXVhXlnQNcuwGQJ2WjPjnp6XHqVTdgIlbaDzJXJIAuCTp3y22t+nhI4B88F/5ldjFA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<script src="/pages/translations.js"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-
-
     </head>
     <body>
-    <header class="headerhome">
-        <div class='logo'>
-            <p>Mr.Dajunctic</p>
-        </div>
-        <nav class="navhome">
-            <ul>
-                <li><a href="https://dajunctic.github.io">Trang chủ</a></li>
-                <li><a href="https://dajunctic.github.io/pages/video">Vi đê ô</a></li>
-                <li><a href="https://dajunctic.github.io/pages/blog">Bài viết</a></li>
-                <li><a class="active" href="https://dajunctic.github.io/pages/artwork">Tác phẩm</a></li>
-                <li><a href="https://dajunctic.github.io/pages/about">Giới thiệu</a></li>
-            </ul>
-        </nav>
-		
-		<div class='toggle_btn'>
-			<i class="fa-solid fa-bars"></i>
-		</div>
-		<nav class="dropdown_menu">
-            <ul>
-                <li><a href="https://dajunctic.github.io">Trang chủ</a></li>
-                <li><a href="https://dajunctic.github.io/pages/video">Vi đê ô</a></li>
-                <li><a href="https://dajunctic.github.io/pages/blog">Bài viết</a></li>
-                <li><a class="active" href="https://dajunctic.github.io/pages/artwork">Tác phẩm</a></li>
-                <li><a href="https://dajunctic.github.io/pages/about">Giới thiệu</a></li>
-            </ul>
-        </nav>
-		
-		<script>
-			const toggleBtn = document.querySelector('.toggle_btn');
-			const toggleBtnIcon = document.querySelector('.toggle_btn i');
-			const dropdownMenu = document.querySelector('.dropdown_menu');
-
-			toggleBtn.onclick = function(){
-				dropdownMenu.classList.toggle('open');
-				const isOpen = dropdownMenu.classList.contains('open');
-				toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
-			};
-		</script>
-    </header>
+    <header-placeholder></header-placeholder>
   
-  
-    <div style="display: flex;align-items: center; align-content: center; height: 80%">
-    <div style="border-radius: 50px;width: 700px;margin: auto;height: 200px;">
-        
-        <h1 style="margin: 20px;text-align: center;color: white"> Page sẽ update khi nào tôi rảnh.<br> Thân ái! </h1>
-        <h1 style="margin: 50px;text-align: center;color: white">Đạt</h1>
-        
-    </div>
-    </div>
-
-    <footer>
-        <div class='footer-content'>
-            <h3>Mr.Dajunctic</h3>
-            <p>Một mọt sách nửa mùa thích chế tạo sản phẩm độc lạ đã từng có tham vọng thống trị thế giới</p>
-        </div>
-        <ul class="socials">
-            <li><a href="https://www.facebook.com/dajunctic"><i class="fa-brands fa-facebook"></i></a></li>
-            <li><a href="https://www.youtube.com/@dajunctic/"><i class="fa-brands fa-youtube"></i></a></li>
-            <li><a href="https://github.com/dajunctic/"><i class="fa-brands fa-github"></i></a></li>
-            <li><a href="https://www.tiktok.com/@gem.thu.hien.triet"><i class="fa-brands fa-tiktok"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/dajunctic-vu/"><i class="fa-brands fa-linkedin"></i></a></li>
-        </ul>
-        <div style="font-size: 13px;font-family: Aquire;padding: 20px;text-align: center">
-            <p>&copy; Copyright 2024 by Mr.Dajunctic</p>
+    <section class="artwork-section" style="text-align: center; color: white;">
+        <div class="section-title" style="margin-bottom: 3rem;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;" data-translate-key="artwork_title">Bộ sưu tập Tác phẩm</h2>
+            <p style="font-size: 1.1rem; max-width: 700px; margin: auto; color: #ccc;" data-translate-key="artwork_description">Nơi tôi lưu giữ những khoảnh khắc sáng tạo, từ những bản vẽ kỹ thuật số đến các dự án thiết kế nhỏ.</p>
         </div>
 
-    </footer>
+        <div class="gallery" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+            <!-- Nội dung mẫu, bạn có thể thay thế bằng ảnh thật -->
+            <div class="gallery-item" style="background: #1e1e1e; padding: 10px; border-radius: 10px; width: 300px;">
+                <img src="https://via.placeholder.com/300x200/1e1e1e/888?text=Tác+phẩm+1" alt="Tác phẩm 1" style="width: 100%; border-radius: 5px;"/>
+                <h3 style="margin-top: 10px; font-size: 1.2rem;" data-translate-key="artwork_item_title">Dự án Neon City</h3>
+                <p style="color: #aaa; font-size: 0.9rem;" data-translate-key="artwork_item_desc">Bản concept art - 2024</p>
+            </div>
+            <!-- Bạn có thể sao chép khối .gallery-item để thêm nhiều tác phẩm hơn -->
+        </div>
+    </section>
 
-    <script  src="./script/index.js"></script>
+    <footer-placeholder></footer-placeholder>
+
+    <script src="/main.js"></script>
 
     </body>
 </html>

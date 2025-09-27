@@ -1,0 +1,42 @@
+{
+    "playlists": {
+        "pygame": {
+            "titleKey": "video_tab_pygame",
+            "descriptionKey": "video_desc_pygame",
+            "videos": [
+                { "id": "-fph0FEiExg", "title": "1. Giới thiệu về Pygame, tạo cửa sổ game" },
+                { "id": "xgxQHMmEloY", "title": "2. Vẽ hình học cơ bản, sự kiện bàn phím" },
+                { "id": "D1usCj5sZ1Y", "title": "3. Luyện tập với game Ping Pong" },
+                { "id": "IxBCbSlZV1U", "title": "4. Hiển thị hình ảnh, chữ trên cửa sổ game" },
+                { "id": "SMnv0BPQ1zw", "title": "5. Nhạc nền và âm thanh hiệu ứng" },
+                { "id": "V1S1Z9chTKM", "title": "6. Tạo Menu trong Pygame" },
+                { "id": "DPjQJFAdAZk", "title": "7. Tạo hiệu ứng hoạt ảnh cho nhân vật" },
+                { "id": "w8AD7rHNUYk", "title": "8. Làm background vô tận như thế nào?" },
+                { "id": "PhSe6ry9Inw", "title": "9. Tạo hiệu ứng khói, khó hay dễ?" },
+                { "id": "MBaEBDyg6kQ", "title": "10. Tạo hiệu ứng hạt" },
+                { "id": "WbE_Vd0u_2Y", "title": "11. Tạo một menu hoàn chỉnh thế nào? [Phần 1]" },
+                { "id": "8vz4LObxOXg", "title": "12. Tạo một menu hoàn chỉnh thế nào? [Phần 2]" },
+                { "id": "4pFRJ_bYl20", "title": "13. Cách để code game Khủng long Chrome [Phần 1]" },
+                { "id": "cQBaCqUNf7A", "title": "14. Cách để code game Khủng long Chrome [Phần 2]" },
+                { "id": "3N4wTgY9lHw", "title": "15. Cách sử dụng Sprite Group cơ bản" }
+            ]
+        },
+        "vlog": {
+            "titleKey": "video_tab_vlog",
+            "descriptionKey": "video_desc_vlog",
+            "videos": [
+                { "id": "3SamYzkVOco", "title": "Cuộc thi máy bay giấy siêu cấp VIP PRO - Vlog #1" }
+            ]
+        },
+        "game_projects": {
+            "titleKey": "video_tab_game_projects",
+            "descriptionKey": "video_desc_game_projects",
+            "videos": [
+                { "id": "FLT3CSHpV1E", "title": "Touhou - The Horror Night - Touhou bản remake (INT2215_22 2021-2022)" },
+                { "id": "YXp9FSqQnzY", "title": "Soul Bomber - Bomberman cổ điển cải tiến (INT2204_45 2022-2023)" },
+                { "id": "drJfRG8iIvg", "title": "Demo Hoang Thanh Thang Long AR Mobile App" },
+                { "id": "Kv_dJ3Pa-GY", "title": "VRA - Hệ thống VR hỗ trợ can thiệp trẻ tự kỷ" }
+            ]
+        }
+    }
+}

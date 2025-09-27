@@ -1,6 +1,7 @@
 .blog-container{
 	min-height: 100vh;
 	display: flex;
+    padding: 2rem 0;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
@@ -13,6 +14,9 @@
 .blog-title{
 	display: flex;
 	justify-content: center;
+    background-color: var(--container-bg);
+    padding: 2rem;
+    border-radius: 10px;
 	align-items: center;
 	flex-direction: column;
 	width: 700px;
@@ -28,7 +32,7 @@
 }
 
 .blog-title p a{
-	color: aqua;
+	color: var(--primary-color);
 	text-decoration: none;
 }
 
@@ -42,12 +46,12 @@
 
 .card{
 	position: relative;
-	background: #fff;
+	background: var(--container-bg);
 	max-width: 325px;
 	width: 325px;
 	height: 300px;
 	margin: 25px;
-	box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+	box-shadow: 0 5px 25px rgba(0,0,0,0.2);
 	border-radius: 10px;
 	overflow: hidden;
 	cursor: pointer;
@@ -64,7 +68,7 @@
 
 .card-info{
 	position: relative;
-	color: #222;
+	color: var(--text-color);
 	height: 120px;
 	padding: 10px 20px 20px;
 }
@@ -97,14 +101,14 @@
 }
 
 .pagination li a{
-	color: #fff;
+	color: var(--text-color-light);
 	text-decoration: none;
 	font-size: 1.2em;
 	line-height: 45px;
 }
 
 .previous-page, .next-page{
-	background: #0AB1CE;
+	background: var(--primary-color);
 	width: 80px;
 	border-radius: 45px;
 	cursor: pointer;
@@ -119,18 +123,18 @@
 }
 
 .current-page, .dots{
-	background: #ccc;
+	background: var(--container-bg);
 	width: 45px;
 	border-radius: 50%;
 	cursor: pointer;
 }
 
 .active{
-	background: #0AB1CE;
+	background: var(--primary-color);
 }
 
 .disable{
-	background: #ccc;
+	background: #555;
 }
 
 @media(max-width: 992px) {

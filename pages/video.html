@@ -8,10 +8,9 @@
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3859487427812629"
      crossorigin="anonymous"></script>
 
-        <link rel="stylesheet" href="../index.css">
-		<link rel="stylesheet" href="../css/video.css">
-		<link rel="stylesheet" href="https://dajunctic.github.io/css/video.css">
-        <link rel="stylesheet" href="https://dajunctic.github.io/index.css">
+        <link rel="stylesheet" href="/index.css">
+		<link rel="stylesheet" href="/css/video.css">
+		<script src="/pages/translations.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css" integrity="sha512-U9Y1sGB3sLIpZm3ePcrKbXVhXlnQNcuwGQJ2WjPjnp6XHqVTdgIlbaDzJXJIAuCTp3y22t+nhI4B88F/5ldjFA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,50 +18,17 @@
 
     </head>
     <body>
-    <header class="headerhome">
-        <div class='logo'>
-            <p>Mr.Dajunctic</p>
-        </div>
-        <nav class="navhome">
-            <ul>
-                <li><a href="https://dajunctic.github.io">Trang chủ</a></li>
-                <li><a class="active" href="https://dajunctic.github.io/pages/video">Vi đê ô</a></li>
-                <li><a href="https://dajunctic.github.io/pages/blog">Bài viết</a></li>
-                <li><a href="https://dajunctic.github.io/pages/artwork">Tác phẩm</a></li>
-                <li><a href="https://dajunctic.github.io/pages/about">Giới thiệu</a></li>
-            </ul>
-        </nav>
-		<div class='toggle_btn'>
-			<i class="fa-solid fa-bars"></i>
-		</div>
-		<nav class="dropdown_menu">
-            <ul>
-                <li><a href="https://dajunctic.github.io">Trang chủ</a></li>
-                <li><a class="active" href="https://dajunctic.github.io/pages/video">Vi đê ô</a></li>
-                <li><a href="https://dajunctic.github.io/pages/blog">Bài viết</a></li>
-                <li><a href="https://dajunctic.github.io/pages/artwork">Tác phẩm</a></li>
-                <li><a href="https://dajunctic.github.io/pages/about">Giới thiệu</a></li>
-            </ul>
-        </nav>
-		
-		<script>
-			const toggleBtn = document.querySelector('.toggle_btn');
-			const toggleBtnIcon = document.querySelector('.toggle_btn i');
-			const dropdownMenu = document.querySelector('.dropdown_menu');
-
-			toggleBtn.onclick = function(){
-				dropdownMenu.classList.toggle('open');
-				const isOpen = dropdownMenu.classList.contains('open');
-				toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
-			};
-		</script>
-
-    </header>
+    <header-placeholder></header-placeholder>
   
   
     <section class="youtube-video-section">
-		<h3 class='video-list-heading'>Pygame Tutorial</h3>
-		<p class='video-list-description'>Đây là series vi đê ô chính của tôi.</p>
+		<h3 class='video-list-heading' id="playlist-title" data-translate-key="video_tab_pygame">Pygame Tutorial</h3>
+		<p class='video-list-description' id="playlist-description" data-translate-key="video_desc_pygame">Đây là series vi đê ô chính của tôi.</p>
+		<div class="playlist-tabs" id="playlist-tabs">
+			<button class="tab-btn active" data-translate-key="video_tab_pygame" data-playlist="pygame">Pygame Tutorial</button>
+			<button class="tab-btn" data-translate-key="video_tab_vlog" data-playlist="vlog">Vlog</button>
+			<button class="tab-btn" data-translate-key="video_tab_game_projects" data-playlist="game_projects">Dự án Game</button>
+		</div>
 		<div class="video-container">
 			<div class='main-video'>
 				<div class='youtube-video'>
@@ -71,113 +37,16 @@
 				</div>
 			</div>
 			
-			<div class='video-list'>
-				<div class='vid active'>
-					<img src="https://img.youtube.com/vi/-fph0FEiExg/maxresdefault.jpg" alt="https://www.youtube.com/embed/-fph0FEiExg?si=-QEFseekYggndOGe">
-					<h3 class='video-title'>1. Giới thiệu về Pygame, tạo cửa sổ game trên Pycharm </h3>
-				</div>
-				<div class='vid'>
-					<img src="https://img.youtube.com/vi/xgxQHMmEloY/maxresdefault.jpg" alt="https://www.youtube.com/embed/xgxQHMmEloY?si=-QEFseekYggndOGe">
-					<h3 class='video-title'>2. Vẽ hình học cơ bản, sự kiện bàn phím </h3>
-				</div>
-				<div class='vid'>
-					<img src="https://img.youtube.com/vi/D1usCj5sZ1Y/maxresdefault.jpg" alt="https://www.youtube.com/embed/D1usCj5sZ1Y?si=-QEFseekYggndOGe">
-					<h3 class='video-title'>3. Luyện tập với game Ping Pong</h3>
-				</div>
-				<div class='vid'>
-					<img src="https://img.youtube.com/vi/IxBCbSlZV1U/maxresdefault.jpg" alt="https://www.youtube.com/embed/IxBCbSlZV1U?si=-QEFseekYggndOGe">
-					<h3 class='video-title'>4. Hiển thị hình ảnh, chữ trên cửa sổ game  </h3>
-				</div>
-				<div class='vid'>
-					<img src="https://img.youtube.com/vi/SMnv0BPQ1zw/maxresdefault.jpg" alt="https://www.youtube.com/embed/SMnv0BPQ1zw?si=-QEFseekYggndOGe">
-					<h3 class='video-title'>5. Nhạc nền và âm thanh hiệu ứng </h3>
-				</div>
-				<div class='vid'>
-					<img src="https://img.youtube.com/vi/V1S1Z9chTKM/maxresdefault.jpg" alt="https://www.youtube.com/embed/V1S1Z9chTKM?si=-QEFseekYggndOGe">
-					<h3 class='video-title'>6. Tạo Menu trong Pygame </h3>
-				</div>
-				<div class='vid'>
-					<img src="https://img.youtube.com/vi/DPjQJFAdAZk/maxresdefault.jpg" alt="https://www.youtube.com/embed/DPjQJFAdAZk?si=-QEFseekYggndOGe">
-					<h3 class='video-title'>7. Tạo hiệu ứng hoạt ảnh cho nhân vật </h3>
-				</div>
-				<div class='vid'>
-					<img src="https://img.youtube.com/vi/w8AD7rHNUYk/maxresdefault.jpg" alt="https://www.youtube.com/embed/w8AD7rHNUYk?si=-QEFseekYggndOGe">
-					<h3 class='video-title'>8. Làm background vô tận như thế nào ? </h3>
-				</div>
-				<div class='vid'>
-					<img src="https://img.youtube.com/vi/PhSe6ry9Inw/maxresdefault.jpg" alt="https://www.youtube.com/embed/PhSe6ry9Inw?si=-QEFseekYggndOGe">
-					<h3 class='video-title'>9. Tạo hiệu ứng khói, khó hay dễ ? </h3>
-				</div>
-				<div class='vid'>
-					<img src="https://img.youtube.com/vi/MBaEBDyg6kQ/maxresdefault.jpg" alt="https://www.youtube.com/embed/MBaEBDyg6kQ?si=-QEFseekYggndOGe">
-					<h3 class='video-title'>10. Tạo hiệu ứng hạt </h3>
-				</div>
-				<div class='vid'>
-					<img src="https://img.youtube.com/vi/WbE_Vd0u_2Y/maxresdefault.jpg" alt="https://www.youtube.com/embed/WbE_Vd0u_2Y?si=-QEFseekYggndOGe">
-					<h3 class='video-title'>11. Tạo một menu hoàn chỉnh thế nào? [Phần 1] </h3>
-				</div>
-				<div class='vid'>
-					<img src="https://img.youtube.com/vi/8vz4LObxOXg/maxresdefault.jpg" alt="https://www.youtube.com/embed/8vz4LObxOXg?si=-QEFseekYggndOGe">
-					<h3 class='video-title'>12. Tạo một menu hoàn chỉnh thế nào? [Phần 2] </h3>
-				</div>
-				<div class='vid'>
-					<img src="https://img.youtube.com/vi/4pFRJ_bYl20/maxresdefault.jpg" alt="https://www.youtube.com/embed/4pFRJ_bYl20?si=-QEFseekYggndOGe">
-					<h3 class='video-title'>13. Cách để code game Khủng long Chrome [Phần 1] </h3>
-				</div>
-				<div class='vid'>
-					<img src="https://img.youtube.com/vi/cQBaCqUNf7A/maxresdefault.jpg" alt="https://www.youtube.com/embed/cQBaCqUNf7A?si=-QEFseekYggndOGe">
-					<h3 class='video-title'>14. Cách để code game Khủng long Chrome [Phần 2] </h3>
-				</div>
-				<div class='vid'>
-					<img src="https://img.youtube.com/vi/3N4wTgY9lHw/maxresdefault.jpg" alt="https://www.youtube.com/embed/3N4wTgY9lHw?si=-QEFseekYggndOGe">
-					<h3 class='video-title'>15. Cách sử dụng Sprite Group cơ bản </h3>
-				</div>
-
-			</div>
+			<div class='video-list' id="video-list"></div>
 		</div>
-		
-		<script>
-			let listVideo = document.querySelectorAll('.video-list .vid');
-			let mainVideo = document.querySelector('.main-video iframe');
-			let title = document.querySelector('.main-video .video-title');
-			
-			listVideo.forEach(video => {
-				video.onclick = () => {
-					listVideo.forEach(vid => vid.classList.remove('active'));
-					video.classList.add('active');
-					if (video.classList.contains("active")){
-						let src = video.children[0].getAttribute('alt');
-						mainVideo.src = src;
-						let text = video.children[1].innerHTML;
-						title.innerHTML = text;
-					}
-				}
-				
-			});
-		</script>
 		
 		
 	</section>
 
-	<footer>
-        <div class='footer-content'>
-            <h3>Mr.Dajunctic</h3>
-            <p>Một mọt sách nửa mùa thích chế tạo sản phẩm độc lạ đã từng có tham vọng thống trị thế giới</p>
-        </div>
-        <ul class="socials">
-            <li><a href="https://www.facebook.com/dajunctic"><i class="fa-brands fa-facebook"></i></a></li>
-            <li><a href="https://www.youtube.com/@dajunctic/"><i class="fa-brands fa-youtube"></i></a></li>
-            <li><a href="https://github.com/dajunctic/"><i class="fa-brands fa-github"></i></a></li>
-            <li><a href="https://www.tiktok.com/@gem.thu.hien.triet"><i class="fa-brands fa-tiktok"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/dajunctic-vu/"><i class="fa-brands fa-linkedin"></i></a></li>
-        </ul>
-        <div style="font-size: 13px;font-family: Aquire;padding: 20px;text-align: center">
-            <p>&copy; Copyright 2024 by Mr.Dajunctic</p>
-        </div>
+	<footer-placeholder></footer-placeholder>
 
-    </footer>
-
-    <script  src="./script/index.js"></script>
+    <script src="/assets/data/video.js"></script>
+    <script src="/main.js"></script>
 
     </body>
 </html>

@@ -1,102 +1,175 @@
-.video-list-heading {
-	font-size: 40px;
-	text-align: center;
-	padding: 10px;
+.youtube-video-section {
+	font-family: "Quicksand", sans-serif;
 }
 
-.video-list-description {
-	padding: 10px;
-	text-align: center;
+:root {
+	--primary-color: #00aaff;
+	--light-bg: #1e1e1e;
+	--dark-bg: #121212;
+	--text-color: #e0e0e0;
+	--text-secondary: #aaaaaa;
 }
 
 .video-container {
 	font-family: "Quicksand", sans-serif;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
-	gap: 15px;
+	gap: 25px; /* Tăng khoảng cách */
 	align-items: flex-start;
 	padding: 5px 2%;
 }
 
-.youtube-video-section {
-	font-family: "Quicksand", sans-serif;
+.video-list-heading {
+	color: var(--primary-color);
+	font-size: 40px;
+	text-align: center;
+}
+.video-list-description {
+	text-align: center;
+	color: var(--text-secondary);
+	margin-bottom: 2rem;
 }
 
 .main-video {
-	background: rgba(0, 0, 0, 0.2);
-	
-	border-radius: 10px;
-	padding: 10px;
+	background: transparent; /* Bỏ nền cũ */
 }
 
-.main-video iframe {
+.main-video .youtube-video {
+	background: #000;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+	margin-bottom: 1rem;
+}
+.main-video .youtube-video iframe {
 	width: 100%;
-	border-radius: 5px;
-	aspect-ratio: 16/9;
+	aspect-ratio: 16 / 9;
+	border-radius: 10px; /* Đồng bộ bo tròn góc */
+	border: none;
 }
 
-.main-video .video-title{
-	color: white;
-	font-size: 23px;
-	padding-top: 15px;
-	padding-bottom: 15px;
-}
-
-.video-list{
-	background: rgba(0, 0, 0, 0.2);
-	border-radius: 5px;
-	height: 480px;
-	overflow-y: scroll;
-}
-
-.video-list .vid iframe {
-	width: 100px;
-	border-radius: 5px;
-	aspect-ratio: 11/9;
-}
-
-.video-list .vid img {
-	width: 100px;
+.video-list {
+	background: var(--light-bg);
 	border-radius: 10px;
-	aspect-ratio: 16/9;
+	max-height: 520px;
+	overflow-y: auto;
+	padding: 10px;
+	transition: opacity 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
 }
 
-.video-list .vid::-webkit-scrollbar{
-	background: #ccc;
-	border-radius: 50px;
+.video-list.fading-out {
+    opacity: 0;
 }
-
-.video-list .vid::-webkit-scrollbar-track{
-	width: 6px;
+/* Custom scrollbar */
+.video-list::-webkit-scrollbar {
+	width: 8px;
+}
+.video-list::-webkit-scrollbar-track {
+	background: var(--dark-bg);
+	border-radius: 10px;
+}
+.video-list::-webkit-scrollbar-thumb {
+	background: #555;
+	border-radius: 10px;
+}
+.video-list::-webkit-scrollbar-thumb:hover {
+	background: #777;
 }
 
 .video-list .vid {
 	display: flex;
 	align-items: center;
 	gap: 15px;
-	/*background: #f7f7f7;*/
-	background: #000;
-	border-radius: 5px;
+	background: var(--dark-bg);
+	border-radius: 8px;
 	margin: 10px;
-	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	border: 1px solid #333;
 	cursor: pointer;
+	overflow: hidden;
+	transition: all 0.3s ease;
 }
 
+.video-list .vid {
+	transition: background-color 0.2s ease;
+}
 .video-list .vid:hover {
-	background: #717171;
+	transform: scale(1.03);
+	background: #2a2a2a;
+	box-shadow: 0 4px 15px rgba(0, 170, 255, 0.1);
+}
+.video-list .vid .img-container {
+    position: relative;
+    flex-shrink: 0; /* Ngăn ảnh bị co lại */
+}
+
+/* Hiệu ứng icon Play khi hover vào ảnh thumbnail */
+.video-list .vid .img-container::after {
+    content: '\f04b'; /* Mã icon Play của Font Awesome */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 24px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.video-list .vid:hover .img-container::after {
+    opacity: 1;
+}
+
+.video-list .vid img {
+	width: 120px; /* Tăng kích thước ảnh thumbnail */
+	border-radius: 8px;
+	aspect-ratio: 16/9;
 }
 
 .video-list .vid.active {
-	background: rgba(204,185,163,1.000);
+	background: var(--primary-color);
+	color: var(--dark-bg);
 }
 
-.video-list .vid.active .video-title {
-	color: #fff;
+/* --- Playlist Tabs Styles --- */
+.playlist-tabs {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	margin-bottom: 2rem;
 }
-
-.video-list .vid .video-title {
-	color: #fff;
-	font-size: 15px;
+.tab-btn {
+	padding: 12px 30px; /* Điều chỉnh lại kích thước */
+	cursor: pointer;
+	border: 1px solid #555;
+	background-color: transparent;
+	color: var(--text-color);
+	border-radius: 25px; /* Tăng độ bo tròn */
+	transition: all 0.3s ease;
+	font-size: 1rem; /* Thêm cỡ chữ */
+	font-weight: 500;
+}
+.tab-btn:hover {
+	transform: translateY(-3px);
+}
+.tab-btn:hover {
+	background-color: #333;
+	border-color: var(--primary-color);
+}
+.tab-btn.active {
+	background-color: var(--primary-color);
+	color: var(--dark-bg);
+	font-weight: bold;
+	border-color: var(--primary-color);
+	box-shadow: 0 0 10px var(--primary-color); /* Thêm hiệu ứng đổ bóng */
 }
 
 @media (max-width:991px){

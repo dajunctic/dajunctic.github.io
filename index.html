@@ -8,77 +8,80 @@
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3859487427812629"
      crossorigin="anonymous"></script>
 
-        <link rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href="https://dajunctic.github.io/index.css">
+        <link rel="stylesheet" href="/index.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css" integrity="sha512-U9Y1sGB3sLIpZm3ePcrKbXVhXlnQNcuwGQJ2WjPjnp6XHqVTdgIlbaDzJXJIAuCTp3y22t+nhI4B88F/5ldjFA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     	
+		<script src="/pages/translations.js"></script>
 		<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-		<script src="index.js"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 	</head>
     <body>
-    <header class="headerhome">
-        <div class='logo'>
-            <p>Mr.Dajunctic</p>
-        </div>
-        <nav class="navhome">
-            <ul>
-                <li><a class='active' href="https://dajunctic.github.io">Trang chủ</a></li>
-                <li><a href="https://dajunctic.github.io/pages/video">Vi đê ô</a></li>
-                <li><a href="https://dajunctic.github.io/pages/blog">Bài viết</a></li>
-                <li><a href="https://dajunctic.github.io/pages/artwork">Tác phẩm</a></li>
-                <li><a href="https://dajunctic.github.io/pages/about">Giới thiệu</a></li>
-            </ul>
-        </nav>
-		
-		<div class='toggle_btn'>
-			<i class="fa-solid fa-bars"></i>
-		</div>
-		<nav class="dropdown_menu">
-            <ul>
-                <li><a class='active' href="https://dajunctic.github.io">Trang chủ</a></li>
-                <li><a href="https://dajunctic.github.io/pages/video">Vi đê ô</a></li>
-                <li><a href="https://dajunctic.github.io/pages/blog">Bài viết</a></li>
-                <li><a href="https://dajunctic.github.io/pages/artwork">Tác phẩm</a></li>
-                <li><a href="https://dajunctic.github.io/pages/about">Giới thiệu</a></li>
-            </ul>
-        </nav>
-		
-		<script>
-			const toggleBtn = document.querySelector('.toggle_btn');
-			const toggleBtnIcon = document.querySelector('.toggle_btn i');
-			const dropdownMenu = document.querySelector('.dropdown_menu');
+    <header-placeholder></header-placeholder>
 
-			toggleBtn.onclick = function(){
-				dropdownMenu.classList.toggle('open');
-				const isOpen = dropdownMenu.classList.contains('open');
-				toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
-			};
-		</script>
-		
-    </header>
-
-		
 	<section class="home" id="home">
 		<div class="home-content">
-			<h3>Xin chào, là tôi</h3>
+			<h3 data-translate-key="home_greeting">Xin chào, là tôi</h3>
 			<h1>Vũ Quý Đạt</h1>
-			<h3>Tôi là một siêu <span id="element"></span></h3>
-			<p>Một sinh viên IT gà mờ từng ước mơ trở thành người quyền lực nhất thế giới đã bị xé nát. Khi anh đang 
+			<h3><span data-translate-key="home_intro">Tôi là một siêu</span> <span id="element"></span></h3>
+			<p data-translate-key="home_description">Một sinh viên IT gà mờ từng ước mơ trở thành người quyền lực nhất thế giới đã bị xé nát. Khi anh đang 
 				phải chật vật mưu sinh thì có gì đó xuất hiện trước mặt anh, “Hệ thống Youtuber cao thủ đã được kích 
 				hoạt”, từ đó bước chân theo con đường trở thành đệ nhất thiên hạ Youtuber.
 			</p>
+			<div class="home-buttons">
+				<a href="/pages/video.html" class="btn" data-translate-key="home_btn_video">Xem Video</a>
+				<a href="/pages/blog.html" class="btn btn-secondary" data-translate-key="home_btn_blog">Đọc Blog</a>
+			</div>
 		</div>
 		
 		<div class="home-img">
 			<img src="https://dajunctic.github.io/assets/images/card.png" alt="">
 		</div>
 
+		<style>
+			/* --- Homepage Style Enhancements --- */
+			.home-img img {
+				animation: floatImage 4s ease-in-out infinite;
+			}
+
+			@keyframes floatImage {
+				0% { transform: translateY(0); }
+				50% { transform: translateY(-15px); }
+				100% { transform: translateY(0); }
+			}
+
+			.home-buttons {
+				margin-top: 2rem;
+			}
+
+			.btn {
+				display: inline-block;
+				padding: 12px 28px;
+				background: var(--primary-color, #00aaff);
+				border-radius: 40px;
+				font-size: 16px;
+				color: #081b29;
+				letter-spacing: 1px;
+				text-decoration: none;
+				font-weight: 600;
+				margin-right: 15px;
+			}
+			.btn:hover {
+				box-shadow: 0 0 15px var(--primary-color, #00aaff);
+			}
+			.btn.btn-secondary {
+				background: transparent;
+				color: var(--primary-color, #00aaff);
+				border: 2px solid var(--primary-color, #00aaff);
+			}
+		</style>
+
 		<script>
+			const currentLang = localStorage.getItem('language') || 'vi';
+			const typedStrings = eval(translations[currentLang].typed_strings);
 			const typed = new Typed('#element', {
-				strings: ['Lập trình viên', 'Youtuber', 'Blogger' ,'Họa sĩ châu Á'],
+				strings: typedStrings,
 				typeSpeed: 50,
 				backSpeed: 50,
 				backDelay: 500,
@@ -88,24 +91,41 @@
 		
 	</section>
 
-    <footer>
-        <div class='footer-content'>
-            <h3>Mr.Dajunctic</h3>
-            <p>Một mọt sách nửa mùa thích chế tạo sản phẩm độc lạ đã từng có tham vọng thống trị thế giới</p>
+    <section class="shop-preview">
+        <div class="shop-header">
+            <h2 data-translate-key="home_shop_title">Ghé thăm cửa hàng</h2>
+            <p data-translate-key="home_shop_description">Khám phá các sản phẩm in 3D độc đáo do tôi thiết kế và chế tạo.</p>
         </div>
-        <ul class="socials">
-            <li><a href="https://www.facebook.com/dajunctic"><i class="fa-brands fa-facebook"></i></a></li>
-            <li><a href="https://www.youtube.com/@dajunctic/"><i class="fa-brands fa-youtube"></i></a></li>
-            <li><a href="https://github.com/dajunctic/"><i class="fa-brands fa-github"></i></a></li>
-            <li><a href="https://www.tiktok.com/@gem.thu.hien.triet"><i class="fa-brands fa-tiktok"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/dajunctic-vu/"><i class="fa-brands fa-linkedin"></i></a></li>
-        </ul>
-        <div style="font-size: 13px;font-family: Aquire;padding: 20px;text-align: center">
-            <p>&copy; Copyright 2024 by Mr.Dajunctic</p>
+        <div class="product-grid">
+            <!-- Product Preview 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://via.placeholder.com/400x300/1e1e1e/888?text=Sản+phẩm+1" alt="Sản phẩm mẫu 1">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name" data-translate-key="product_placeholder_name">Sản phẩm mẫu</h3>
+                    <p class="product-price" data-translate-key="product_placeholder_price">Liên hệ để biết giá</p>
+                </div>
+            </div>
+            <!-- Product Preview 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://via.placeholder.com/400x300/1e1e1e/888?text=Sản+phẩm+2" alt="Sản phẩm mẫu 2">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name" data-translate-key="product_placeholder_name">Sản phẩm mẫu</h3>
+                    <p class="product-price" data-translate-key="product_placeholder_price">Liên hệ để biết giá</p>
+                </div>
+            </div>
         </div>
+        <div class="shop-preview-footer">
+            <a href="/pages/shop.html" class="btn" data-translate-key="home_shop_button">Xem tất cả sản phẩm</a>
+        </div>
+    </section>
 
-    </footer>
+    <footer-placeholder></footer-placeholder>
 
+	<script src="main.js"></script>
 
 
     </body>

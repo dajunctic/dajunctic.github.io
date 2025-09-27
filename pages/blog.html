@@ -8,58 +8,81 @@
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3859487427812629"
      crossorigin="anonymous"></script>
 
-        <link rel="stylesheet" href="../index.css">
-		<link rel="stylesheet" href="../css/blog.css">
-		<link rel="stylesheet" href="https://dajunctic.github.io/css/blog.css">
-        <link rel="stylesheet" href="https://dajunctic.github.io/index.css">
+        <link rel="stylesheet" href="/index.css">
+		<link rel="stylesheet" href="/css/blog.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css" integrity="sha512-U9Y1sGB3sLIpZm3ePcrKbXVhXlnQNcuwGQJ2WjPjnp6XHqVTdgIlbaDzJXJIAuCTp3y22t+nhI4B88F/5ldjFA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<script src="/pages/translations.js"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+		<style>
+			:root {
+				--primary-color: #00aaff;
+				--dark-bg: #121212;
+				--light-bg: #1e1e1e;
+				--text-color: #e0e0e0;
+			}
+			.card {
+				background: var(--light-bg);
+				border-radius: 15px;
+				overflow: hidden;
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+				border: 1px solid #333;
+			}
+			.card:hover {
+				transform: translateY(-10px);
+				box-shadow: 0 10px 20px rgba(0, 170, 255, 0.2);
+			}
+			.card-info h3 {
+				color: var(--primary-color);
+			}
+			.pagination .page-link {
+				color: var(--text-color);
+				background-color: transparent;
+				border: 1px solid #555;
+				margin: 0 4px;
+				border-radius: 5px;
+			}
+			.pagination .page-item.active .page-link {
+				background-color: var(--primary-color);
+				border-color: var(--primary-color);
+				color: #121212;
+				font-weight: bold;
+			}
+			.pagination .page-item:not(.disable) .page-link:hover {
+				background-color: #333;
+				border-color: #777;
+			}
+			/* --- Search Bar Styles --- */
+			.search-container {
+				position: relative;
+				width: 80%;
+				max-width: 600px;
+				margin: 1rem auto 2rem;
+			}
+			#searchInput {
+				width: 100%;
+				padding: 12px 20px 12px 45px;
+				border-radius: 25px;
+				border: 1px solid #555;
+				background-color: var(--light-bg);
+				color: var(--text-color);
+				font-size: 1rem;
+				transition: border-color 0.3s, box-shadow 0.3s;
+			}
+			#searchInput:focus {
+				outline: none;
+				border-color: var(--primary-color);
+				box-shadow: 0 0 10px rgba(0, 170, 255, 0.3);
+			}
+
+		</style>
 
     </head>
     <body>
-    <header class="headerhome">
-        <div class='logo'>
-            <p>Mr.Dajunctic</p>
-        </div>
-        <nav class="navhome">
-            <ul>
-                <li><a href="https://dajunctic.github.io">Trang chủ</a></li>
-                <li><a href="https://dajunctic.github.io/pages/video">Vi đê ô</a></li>
-                <li><a class="active" href="https://dajunctic.github.io/pages/blog">Bài viết</a></li>
-                <li><a href="https://dajunctic.github.io/pages/artwork">Tác phẩm</a></li>
-                <li><a href="https://dajunctic.github.io/pages/about">Giới thiệu</a></li>
-            </ul>
-        </nav>
-		<div class='toggle_btn'>
-			<i class="fa-solid fa-bars"></i>
-		</div>
-		<nav class="dropdown_menu">
-            <ul>
-                <li><a href="https://dajunctic.github.io">Trang chủ</a></li>
-                <li><a href="https://dajunctic.github.io/pages/video">Vi đê ô</a></li>
-                <li><a class="active" href="https://dajunctic.github.io/pages/blog">Bài viết</a></li>
-                <li><a href="https://dajunctic.github.io/pages/artwork">Tác phẩm</a></li>
-                <li><a href="https://dajunctic.github.io/pages/about">Giới thiệu</a></li>
-            </ul>
-        </nav>
-		
-		<script>
-			const toggleBtn = document.querySelector('.toggle_btn');
-			const toggleBtnIcon = document.querySelector('.toggle_btn i');
-			const dropdownMenu = document.querySelector('.dropdown_menu');
-
-			toggleBtn.onclick = function(){
-				dropdownMenu.classList.toggle('open');
-				const isOpen = dropdownMenu.classList.contains('open');
-				toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
-			};
-		</script>
-
-    </header>
+    <header-placeholder></header-placeholder>
   
   
     <section>
@@ -67,12 +90,17 @@
 		
 		<div class='blog-container'>
 			<div class="blog-title">
-				<h2> Chữa bài Daily Leetcode</h2>
-				<p> Hằng ngày tôi đều làm Leetcode Daily, thứ 7 hàng tuần tôi luôn dành thời gian viết chữa bài 
+				<h2 data-translate-key="blog_title"> Chữa bài Daily Leetcode</h2>
+				<p data-translate-key="blog_p1"> Hằng ngày tôi đều làm Leetcode Daily, thứ 7 hàng tuần tôi luôn dành thời gian viết chữa bài 
 					với hi vọng có thể truyền cảm hứng cho mọi người rèn luyện sự kỷ luật.</p>
-				<p> Tham gia ngay <i class="fa-brands fa-discord"></i> <a href="https://discord.gg/BrSzUsWp2w">  Lowie's Leetcode Community </a> để rèn luyện tư duy thuật toán nào!</p>
+				<p><span data-translate-key="blog_p2">Tham gia ngay</span> <i class="fa-brands fa-discord"></i> <a href="https://discord.gg/BrSzUsWp2w">  Lowie's Leetcode Community </a> <span data-translate-key="blog_p3">để rèn luyện tư duy thuật toán nào!</span></p>
 			</div>
 			
+			<div class="search-container">
+				<input type="text" id="searchInput" placeholder="Tìm kiếm bài viết theo tiêu đề..." data-translate-key="blog_search_placeholder">
+			</div>
+
+
 			<div class='card-content' style="display: none;">
 			<!--	<div class='card'>
 					
@@ -170,15 +198,17 @@
 					var totalPages = Math.ceil(numberOfItems / limitPerPage);
 
 					var paginationSize = 7; // page element visible in the pagination
-
 					var currentPage;
 
 					function showPage(whichPage){
+						var $cards = $(".card-content .card:visible");
+						var totalPages = Math.ceil($cards.length / limitPerPage);
+
 						if (whichPage < 1 || whichPage > totalPages) return false;
 
 						currentPage = whichPage;
 
-						$(".card-content .card").hide().slice((currentPage - 1) * limitPerPage, currentPage * limitPerPage).show();
+						$cards.hide().slice((currentPage - 1) * limitPerPage, currentPage * limitPerPage).show();
 
 						$(".pagination li").slice(1, -1).remove();
 
@@ -195,9 +225,9 @@
 
 					$(".pagination").append(
 						$("<li>").addClass("page-item").addClass("previous-page").append($("<a>").addClass("page-link")
-						.attr({href: "javascript:void(0)"}).text("Prev")),
+						.attr({href: "javascript:void(0)"}).attr("data-translate-key", "blog_prev").text("Prev")),
 						$("<li>").addClass("page-item").addClass("next-page").append($("<a>").addClass("page-link")
-						.attr({href: "javascript:void(0)"}).text("Next")),
+						.attr({href: "javascript:void(0)"}).attr("data-translate-key", "blog_next").text("Next")),
 					);
 
 					$(".card-content").show();
@@ -214,31 +244,26 @@
 					$(".previous-page").on("click", function(){
 						return showPage(currentPage - 1);
 					});
+
+					// Search functionality
+					$("#searchInput").on("keyup", function() {
+						var searchTerm = $(this).val().toLowerCase();
+						$(".card-content .card").hide().filter(function() {
+							return $(this).find("h3").text().toLowerCase().includes(searchTerm);
+						}).show();
+						// Reset to the first page of search results
+						showPage(1);
+					});
+
 				});
 			});
 			
 		</script>
 	</section>
 
-	<footer>
-        <div class='footer-content'>
-            <h3>Mr.Dajunctic</h3>
-            <p>Một mọt sách nửa mùa thích chế tạo sản phẩm độc lạ đã từng có tham vọng thống trị thế giới</p>
-        </div>
-        <ul class="socials">
-            <li><a href="https://www.facebook.com/dajunctic"><i class="fa-brands fa-facebook"></i></a></li>
-            <li><a href="https://www.youtube.com/@dajunctic/"><i class="fa-brands fa-youtube"></i></a></li>
-            <li><a href="https://github.com/dajunctic/"><i class="fa-brands fa-github"></i></a></li>
-            <li><a href="https://www.tiktok.com/@gem.thu.hien.triet"><i class="fa-brands fa-tiktok"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/dajunctic-vu/"><i class="fa-brands fa-linkedin"></i></a></li>
-        </ul>
-        <div style="font-size: 13px;font-family: Aquire;padding: 20px;text-align: center">
-            <p>&copy; Copyright 2024 by Mr.Dajunctic</p>
-        </div>
+	<footer-placeholder></footer-placeholder>
 
-    </footer>
-
-    <!--<script  src="./script/index.js"></script>-->
+    <script src="/main.js"></script>
 
     </body>
 </html>

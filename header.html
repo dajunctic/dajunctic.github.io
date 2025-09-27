@@ -1,0 +1,114 @@
+<header class="headerhome">
+    <div class='logo'>
+        <p>Mr.Dajunctic</p>
+    </div>
+    <nav class="navhome">
+        <ul>
+            <li><a href="/" data-translate-key="nav_home">Trang chủ</a></li>
+            <li><a href="/pages/about.html" data-translate-key="nav_about">Giới thiệu</a></li>
+            <li><a href="/pages/blog.html" data-translate-key="nav_blog">Bài viết</a></li>
+            <li><a href="/pages/video.html" data-translate-key="nav_video">Video</a></li>
+            <li><a href="/pages/artwork.html" data-translate-key="nav_artwork">Tác phẩm</a></li>
+            <li><a href="/pages/shop.html" data-translate-key="nav_shop">Cửa hàng</a></li>
+        </ul>
+        <div class="lang-switcher">
+            <a href="#" class="lang-btn" data-lang="vi">VI</a>
+            <span>|</span>
+            <a href="#" class="lang-btn" data-lang="en">EN</a>
+        </div>
+        <div id="theme-toggle" class="theme-switcher">
+            <i class="fa-solid fa-moon"></i>
+        </div>
+    </nav>
+    <div class='toggle_btn'>
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <nav class="dropdown_menu">
+        <ul>
+            <li><a href="/" data-translate-key="nav_home">Trang chủ</a></li>
+            <li><a href="/pages/about.html" data-translate-key="nav_about">Giới thiệu</a></li>
+            <li><a href="/pages/blog.html" data-translate-key="nav_blog">Bài viết</a></li>
+            <li><a href="/pages/video.html" data-translate-key="nav_video">Video</a></li>
+            <li><a href="/pages/artwork.html" data-translate-key="nav_artwork">Tác phẩm</a></li>
+            <li><a href="/pages/shop.html" data-translate-key="nav_shop">Cửa hàng</a></li>
+            <li><div class="lang-switcher-mobile">
+                <a href="#" class="lang-btn" data-lang="vi">VI</a> / <a href="#" class="lang-btn" data-lang="en">EN</a>
+            </div></li>
+            <li><div id="theme-toggle-mobile" class="theme-switcher-mobile">
+                <i class="fa-solid fa-moon"></i> <span data-translate-key="nav_theme_toggle">Chuyển giao diện</span>
+            </div></li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    /* --- Header Style Enhancements --- */
+    .navhome a, .dropdown_menu a {
+        position: relative;
+        padding-bottom: 5px;
+    }
+
+    /* Hiệu ứng gạch chân khi hover */
+    .navhome a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--primary-color, #00aaff); /* Dùng màu nhấn */
+        transition: width 0.3s ease;
+    }
+    .navhome a:hover::after, .navhome a.active::after {
+        width: 100%;
+    }
+
+    /* Làm nổi bật link active */
+    .navhome a.active, .dropdown_menu a.active {
+        color: var(--primary-color, #00aaff);
+        font-weight: bold;
+    }
+
+    /* --- Language Switcher --- */
+    .lang-switcher {
+        margin-left: 20px;
+    }
+    .lang-switcher a, .lang-switcher-mobile a {
+        color: var(--text-color-light);
+        text-decoration: none;
+        padding: 2px 5px;
+        border-radius: 3px;
+    }
+    .lang-switcher a.active, .lang-switcher-mobile a.active {
+        background-color: var(--primary-color, #00aaff);
+        color: var(--body-bg-color);
+    }
+
+    /* --- Theme Switcher --- */
+    .theme-switcher, .theme-switcher-mobile {
+        margin-left: 20px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        color: var(--text-color-light);
+    }
+    .theme-switcher-mobile {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+    }
+</style>
+
+<script>
+    // Automatically set active class on nav links
+    const currentPath = window.location.pathname.replace(/\/$/, ''); // Get current path, remove trailing slash if any
+    const homePath = '/index.html';
+
+    document.querySelectorAll('.navhome a, .dropdown_menu a').forEach(link => {
+        const linkPath = new URL(link.href).pathname.replace(/\/$/, '');
+        // Special case for home page link ("/") to match "/index.html"
+        if (linkPath === currentPath || (linkPath === '' && currentPath === homePath.replace(/\/$/, ''))) {
+            link.classList.add('active');
+        }
+    });
+</script>

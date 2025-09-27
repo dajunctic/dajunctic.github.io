@@ -8,79 +8,210 @@
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3859487427812629"
      crossorigin="anonymous"></script>
 
-        <link rel="stylesheet" href="../index.css">
-        <link rel="stylesheet" href="https://dajunctic.github.io/index.css">
+        <link rel="stylesheet" href="/index.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css" integrity="sha512-U9Y1sGB3sLIpZm3ePcrKbXVhXlnQNcuwGQJ2WjPjnp6XHqVTdgIlbaDzJXJIAuCTp3y22t+nhI4B88F/5ldjFA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<script src="/pages/translations.js"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-
-
     </head>
     <body>
-    <header class="headerhome">
-        <div class='logo'>
-            <p>Mr.Dajunctic</p>
-        </div>
-        <nav class="navhome">
-            <ul>
-                <li><a href="https://dajunctic.github.io">Trang chủ</a></li>
-                <li><a href="https://dajunctic.github.io/pages/video">Vi đê ô</a></li>
-                <li><a href="https://dajunctic.github.io/pages/blog">Bài viết</a></li>
-                <li><a href="https://dajunctic.github.io/pages/artwork">Tác phẩm</a></li>
-                <li><a class="active" href="https://dajunctic.github.io/pages/about">Giới thiệu</a></li>
-            </ul>
-        </nav>
-		<div class='toggle_btn'>
-			<i class="fa-solid fa-bars"></i>
-		</div>
-		<nav class="dropdown_menu">
-            <ul>
-                <li><a href="https://dajunctic.github.io">Trang chủ</a></li>
-                <li><a href="https://dajunctic.github.io/pages/video">Vi đê ô</a></li>
-                <li><a href="https://dajunctic.github.io/pages/blog">Bài viết</a></li>
-                <li><a href="https://dajunctic.github.io/pages/artwork">Tác phẩm</a></li>
-                <li><a class="active" href="https://dajunctic.github.io/pages/about">Giới thiệu</a></li>
-            </ul>
-        </nav>
-		
-		<script>
-			const toggleBtn = document.querySelector('.toggle_btn');
-			const toggleBtnIcon = document.querySelector('.toggle_btn i');
-			const dropdownMenu = document.querySelector('.dropdown_menu');
-
-			toggleBtn.onclick = function(){
-				dropdownMenu.classList.toggle('open');
-				const isOpen = dropdownMenu.classList.contains('open');
-				toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
-			};
-		</script>
-
-    </header>
+    <header-placeholder></header-placeholder>
   
-  
-    <section>
-		
-	</section>
+    <div class="resume-container">
+        <header class="resume-header">
+            <h1 data-translate-key="about_name">Vũ Quý Đạt</h1>
+            <p class="job-title" data-translate-key="about_job_title">Unity Developer</p>
+            <div class="contact-info">
+                <span data-translate-key="about_location"><i class="fa-solid fa-location-dot"></i> Hà Nội, Việt Nam</span>
+                <span><i class="fa-solid fa-phone"></i> (+84) 34 786 9209</span>
+                <span><i class="fa-solid fa-envelope"></i> dajuncticvu@gmail.com</span>
+            </div>
+        </header>
 
-    <footer>
-        <div class='footer-content'>
-            <h3>Mr.Dajunctic</h3>
-            <p>Một mọt sách nửa mùa thích chế tạo sản phẩm độc lạ đã từng có tham vọng thống trị thế giới</p>
-        </div>
-        <ul class="socials">
-            <li><a href="https://www.facebook.com/dajunctic"><i class="fa-brands fa-facebook"></i></a></li>
-            <li><a href="https://www.youtube.com/@dajunctic/"><i class="fa-brands fa-youtube"></i></a></li>
-            <li><a href="https://github.com/dajunctic/"><i class="fa-brands fa-github"></i></a></li>
-            <li><a href="https://www.tiktok.com/@gem.thu.hien.triet"><i class="fa-brands fa-tiktok"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/dajunctic-vu/"><i class="fa-brands fa-linkedin"></i></a></li>
-        </ul>
-        <div style="font-size: 13px;font-family: Aquire;padding: 20px;text-align: center">
-            <p>&copy; Copyright 2024 by Mr.Dajunctic</p>
-        </div>
+        <main class="resume-main-grid">
+            <div class="resume-column">
+            <section class="resume-section">
+                <h2 data-translate-key="about_skills"><i class="fa-solid fa-code"></i> Kỹ năng</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4 data-translate-key="about_skills_lang">Ngôn ngữ lập trình</h4>
+                        <p>C#, Python, C++, Java, MySQL, JavaScript</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4 data-translate-key="about_skills_tools">Framework & Công cụ</h4>
+                        <p>Unity, TensorFlow, PyTorch, OpenCV, Hugging Face, NLTK, Scikit-learn, Tkinter, Pygame, Kivy, Flet</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4 data-translate-key="about_skills_ml">Học máy & AI</h4>
+                        <p>NLP, Deep Learning, Reinforcement Learning, Computer Vision</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4 data-translate-key="about_skills_others">Khác</h4>
+                        <p>GitHub, Data Structures & Algorithms, Mathematics, Competitive Programming</p>
+                    </div>
+                </div>
+            </section>
+            </div>
+            <div class="resume-column">
+                <section class="resume-section">
+                    <h2 data-translate-key="about_education"><i class="fa-solid fa-graduation-cap"></i> Học vấn</h2>
+                    <div class="entry">
+                        <h4 data-translate-key="about_uet">Trường Đại học Công Nghệ, ĐHQGHN</h4>
+                        <p class="sub-heading" data-translate-key="about_uet_major">Chuyên ngành: Khoa học máy tính (Chất lượng cao) | 2021 - 2024</p>
+                    </div>
+                    <div class="entry">
+                        <h4 data-translate-key="about_hsgs">Trường THPT chuyên Khoa học tự nhiên, ĐHQGHN</h4>
+                        <p class="sub-heading" data-translate-key="about_hsgs_major">Chuyên ngành: Toán | 2018 - 2021</p>
+                    </div>
+                </section>
+            </div>
+            <div class="resume-column">
+                <section class="resume-section">
+                    <h2 data-translate-key="about_activities_awards"><i class="fa-solid fa-trophy"></i> Giải thưởng</h2>
+                    <ul class="awards-list">
+                        <li data-translate-key="award_silver"><strong>Huy chương Bạc</strong> – Môn Tin học - Kỳ thi học sinh giỏi lần thứ 12 của các trường THPT chuyên khu vực Đồng bằng sông Hồng và Duyên hải phía Bắc (2019)</li>
+                        <li data-translate-key="award_bronze1"><strong>Huy chương Đồng</strong> – Môn Tin học - Olympic HSGS ĐHQGHN (2019)</li>
+                        <li data-translate-key="award_bronze2"><strong>Huy chương Đồng</strong> – Môn Tin học - Kỳ thi học sinh giỏi của các trường THPT chuyên do ĐHQGHN tổ chức (2019)</li>
+                        <li data-translate-key="award_ijso"><strong>Giải Nhì cấp Thành phố</strong> – Môn Khoa học lớp 9 - Kỳ thi IJSO thành phố Hà Nội (2018)</li>
+                        <li data-translate-key="award_math9"><strong>Giải Khuyến khích cấp Thành phố</strong> – Môn Toán lớp 9 - Kì thi HSG thành phố Hà Nội (2018)</li>
+                        <li data-translate-key="award_violympic"><strong>Giải Khuyến khích cấp Quốc gia</strong> – Cuộc thi Violympic Toán Tiếng Anh lớp 8, Việt Nam (2017)</li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+    </div>
 
-    </footer>
+    <style>
+        .resume-container {
+            max-width: 1500px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: var(--container-bg);
+            border-radius: 10px;
+            color: var(--text-color);
+            font-family: "Quicksand", sans-serif;
+            border: 1px solid var(--border-color);
+        }
+        .resume-header {
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .resume-header h1 {
+            font-size: 2.8rem;
+            color: var(--text-color-light);
+            margin-bottom: 0.5rem;
+        }
+        .resume-header .job-title {
+            font-size: 1.3rem;
+            color: var(--primary-color, #00aaff);
+            margin-bottom: 1rem;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px 20px;
+            color: var(--text-color);
+        }
+        .contact-info a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .contact-info a:hover {
+            color: var(--primary-color, #00aaff);
+        }
+        .contact-info i {
+            margin-right: 8px;
+        }
+        .resume-section {
+            margin-bottom: 2rem;
+        }
+        .resume-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color, #00aaff);
+            border-bottom: 2px solid var(--primary-color, #00aaff);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .entry {
+            margin-bottom: 1.5rem;
+        }
+        .entry h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+        }
+        .entry .sub-heading {
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+        }
+        .entry ul {
+            list-style-position: inside;
+            padding-left: 5px;
+        }
+        .entry li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .skill-category h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-color-light);
+        }
+        .skill-category p {
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .resume-main-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        @media (max-width: 992px) {
+            .resume-main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* --- Awards List Styling --- */
+        .awards-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .awards-list li {
+            position: relative;
+            padding: 10px 10px 10px 30px; /* Add padding for hover effect and icon */
+            margin-bottom: 0.75rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .awards-list li:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        .awards-list li::before {
+            content: '\f091'; /* Font Awesome trophy icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 5px;
+            top: 14px;
+            color: #ffd700; /* Gold color for the trophy */
+        }
+    </style>
 
+    <footer-placeholder></footer-placeholder>
+
+	<script src="/main.js"></script>
 
     </body>
 </html>
