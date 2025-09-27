@@ -143,7 +143,7 @@ const translations = {
         about_p2: "Trang web này là ngôi nhà nhỏ nơi tôi chia sẻ kiến thức về lập trình, những hướng dẫn làm game qua series Pygame, các bài giải LeetCode hàng tuần, và cả những suy ngẫm cá nhân về cuộc sống và công nghệ.",
         about_p3: "Mục tiêu của tôi là xây dựng một cộng đồng nơi mọi người có thể cùng nhau học hỏi, chia sẻ và truyền cảm hứng. Cảm ơn bạn đã ghé thăm, hy vọng bạn sẽ tìm thấy điều gì đó hữu ích và thú vị ở đây!",
         about_name: "Vũ Quý Đạt",
-        about_job_title: "Unity Developer",
+        about_job_title: "Nhà phát triển game Unity",
         about_location: "Hà Nội, Việt Nam",
         about_work_experience: "Kinh nghiệm làm việc",
         about_freelance: "Lập trình viên Game tự do",
